@@ -4,7 +4,7 @@
 bool PBKDF2_SHA512_init(UDF_INIT *initid, UDF_ARGS *args, char *message)
 {
 	initid->max_length = 64; //64 bites for a SHA-512 checksum
-	if (args->arg_count != 4)
+	if (args->arg_count != 3)
 	{
 		strcpy(message,"PBKDF2_SHA512() requires three arguments");
 		return 1;
